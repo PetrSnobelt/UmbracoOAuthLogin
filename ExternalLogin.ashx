@@ -30,9 +30,6 @@ public class ExternalLogin : IHttpHandler {
     
     public void ProcessRequest(HttpContext context)
     {
-        //string email = "petr.snobelt@gmail.com";
-        //LogInByEmail(context, email, "debug");
-               
         IAuthenticationManager authManager = context.GetOwinContext().Authentication;
         if (string.IsNullOrEmpty(context.Request.QueryString[CallBackKey]))
         {
